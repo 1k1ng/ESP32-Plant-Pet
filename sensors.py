@@ -41,12 +41,9 @@ def read_sensors():
 
     :return: A tuple containing ldr_percent (int), soil_percent (int), and temp_c (float).
     """
-    # Simulated sensor readings
-    # Replace these with actual sensor reading code in your implementation
-
-    ldr_raw = 1000
-    soil_raw = 1500
-    lm335_raw = 2048
+    ldr_raw = LDR_ADC.read()
+    soil_raw = SOIL_ADC.read()
+    lm335_raw = LM335_ADC.read()
     ldr_percent = map_range(ldr_raw, LDR_MIN_BRIGHTNESS, LDR_MAX_BRIGHTNESS, 0, 100)
     soil_percent = map_range(soil_raw, DRY_SOIL_MOISTURE, WET_SOIL_MOISTURE, 0, 100)
 

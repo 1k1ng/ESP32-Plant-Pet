@@ -68,12 +68,17 @@ This project is based on and inspired by: [CodersCafeTech/Fyto](https://github.c
 ### ⚖️ License & Credits
 
 This project is a derivative work based on [Fyto](https://github.com/CodersCafeTech/Fyto) by [CodersCafeTech](https://github.com/CodersCafeTech).  
+The emotion states, thresholds, program flow and the emotion images are adapted from Fyto (the images were converted to RGB565).  
 The original work is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** License.
 
 **Changes made in this repository:**
 * Adapted the codebase to work with MicroPython on an ESP32-WROOM.
 * Implemented drivers and logic for the ST7789 display using `.bin` (RGB565) assets.
 * Removed the IR sensor logic and adjusted thresholds for LDR, LM335, and capacitive soil moisture sensors.
+
+**Third-party components:**
+* `st7789.py` – MIT License, © Russ Hughes and Ivan Belokobylskiy (license text in the file header).
+* `vga1_8x16.py`, `vga1_16x32.py` – bitmap fonts converted for use with the ST7789 driver above.
 
 In accordance with the original license, this project is shared under the same terms and **may not be used for commercial purposes**.  
 To view a copy of the full license, visit [CC BY-NC 4.0 Legal Code](https://creativecommons.org/licenses/by-nc/4.0/legalcode).
